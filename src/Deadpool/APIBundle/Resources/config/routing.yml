@@ -1,0 +1,4 @@
+deadpool_api_homepage:
+    resource: '@DeadpoolAPIBundle/Controller'
+    type:     annotation
+    prefix:   /

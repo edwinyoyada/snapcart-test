@@ -1,0 +1,11 @@
+services:
+    deadpool.user_service:
+        class: Deadpool\APIBundle\Services\UserService
+        arguments: ["@doctrine", "@service_container"]
+    deadpool.user_builder:
+        class: Deadpool\APIBundle\Builder\UserBuilder
+        arguments: ["@security.password_encoder"]
+    deadpool.security.authentication_event_listener:
+            class: Deadpool\APIBundle\Listener\AuthenticationListener
+            tags:
+                - { name: kernel.event_subscriber }

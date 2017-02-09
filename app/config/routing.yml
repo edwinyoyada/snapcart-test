@@ -1,0 +1,7 @@
+deadpool_api:
+    resource: "@DeadpoolAPIBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
